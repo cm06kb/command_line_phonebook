@@ -35,7 +35,9 @@ def home():
             if business_cat_search=="":
                 resp_person = None
                 resp_bus_cat = None
+                print(business_name_search, user_location )
                 resp_bus_name = search_by_business_name(business_name_search, user_location)
+                print(resp_bus_name)
                 return render_template('template.html',resp_person=resp_person, resp_bus_cat=resp_bus_cat, resp_bus_name=resp_bus_name,  user_location=user_location, business_name_search=business_name_search)
             
             else:
